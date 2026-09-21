@@ -323,7 +323,9 @@ ul {
 
 .about-photo {
   position: relative;
+  width: 100%;
   max-width: 360px;
+  aspect-ratio: 1 / 1;
   margin: 0 auto;
   border-radius: 50%;
   overflow: hidden;
