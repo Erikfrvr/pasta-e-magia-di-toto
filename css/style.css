@@ -511,6 +511,21 @@ ul {
   padding: 1.8rem 0;
 }
 
+.footer-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.footer-logo img {
+  width: 84px;
+  height: 84px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--color-gold);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+}
+
 .footer-bottom {
   text-align: center;
   font-size: 0.8rem;
@@ -632,6 +647,11 @@ ul {
 
   .about-photo {
     max-width: 300px;
+  }
+
+  .footer-logo img {
+    width: 68px;
+    height: 68px;
   }
 
   .dish-body {
