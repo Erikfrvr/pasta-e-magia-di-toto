@@ -6,7 +6,7 @@ exclusivamente delivery, comandada pelo chef Salvatore Costantino.
 ## O que tem no site
 
 * Cardápio com os 6 pratos da casa, cada um com foto própria e botões de
-  pedido direto para iFood, Keeta e 99.
+  pedido direto para iFood e Keeta.
 * Seção com a história do chef Salvatore "Totó" Costantino.
 * Layout responsivo, pensado primeiro para celular.
 * Site 100% estático: HTML, CSS e JavaScript puros, sem framework e sem
@@ -25,16 +25,15 @@ PastaeMagia/
 └── README.md
 ```
 
-## Colocar os links reais de iFood, Keeta e 99
+## Colocar os links reais de iFood e Keeta
 
-Cada prato tem 3 botões com `href="#"`. Em `index.html`, procure os blocos
+Cada prato tem 2 botões com `href="#"`. Em `index.html`, procure os blocos
 `delivery-buttons` (um por prato) e troque o `#` pelo link real da loja em
 cada plataforma:
 
 ```html
 <a class="delivery-btn ifood" href="https://www.ifood.com.br/delivery/sua-cidade/seu-restaurante" target="_blank" rel="noopener noreferrer">iFood</a>
 <a class="delivery-btn keeta" href="https://www.keeta.com/sua-loja" target="_blank" rel="noopener noreferrer">Keeta</a>
-<a class="delivery-btn noventa-nove" href="https://99food.com.br/sua-loja" target="_blank" rel="noopener noreferrer">99</a>
 ```
 
 Se o link for o mesmo em todos os pratos (leva para a página geral da loja
