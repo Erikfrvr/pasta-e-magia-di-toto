@@ -329,7 +329,6 @@ ul {
 
 .about-photo {
   position: relative;
-  z-index: 2;
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow-card);
@@ -383,8 +382,6 @@ ul {
 }
 
 .section-logo {
-  position: relative;
-  z-index: 2;
   display: flex;
   justify-content: center;
   background: var(--color-wheat);
@@ -413,8 +410,6 @@ ul {
 }
 
 .dish-card {
-  position: relative;
-  z-index: 2;
   background: #fffdf8;
   border-radius: var(--radius);
   overflow: hidden;
@@ -540,71 +535,6 @@ ul {
   font-size: 0.8rem;
   color: var(--color-wheat-dark);
   opacity: 0.7;
-}
-
-/* ---------- Graozinhos de massa flutuando no fundo ---------- */
-.pasta-bg {
-  position: fixed;
-  inset: 0;
-  z-index: 1;
-  overflow: hidden;
-  pointer-events: none;
-  mix-blend-mode: soft-light;
-}
-
-.pasta-bg.pasta-bg--claro {
-  --op: 0.5;
-  mix-blend-mode: multiply;
-}
-
-.grao {
-  position: absolute;
-  bottom: -12vh;
-  width: 16px;
-  height: 7px;
-  border-radius: 50%;
-  opacity: var(--op, 0.16);
-  background: radial-gradient(ellipse at center, var(--cor, var(--color-gold)) 0%, transparent 72%);
-  animation: grao-subir linear infinite;
-  transition: opacity 0.5s ease;
-  will-change: transform, opacity;
-}
-
-@keyframes grao-subir {
-  from {
-    transform: translate3d(0, 0, 0) rotate(var(--tilt, 0deg));
-  }
-  to {
-    transform: translate3d(var(--drift, 30px), -120vh, 0) rotate(calc(var(--tilt, 0deg) + 360deg));
-  }
-}
-
-.grao:nth-child(1)  { left: 4%;  width: 11px; height: 5px; --cor: var(--color-gold);   --tilt: -12deg; --drift: 22px;  animation-duration: 21s; animation-delay: -2s; }
-.grao:nth-child(2)  { left: 14%; width: 19px; height: 8px; --cor: var(--color-basil);  --tilt: 18deg;  --drift: -32px; animation-duration: 27s; animation-delay: -9s; }
-.grao:nth-child(3)  { left: 24%; width: 9px;  height: 4px; --cor: var(--color-tomato); --tilt: 8deg;   --drift: 16px;  animation-duration: 17s; animation-delay: -4s; }
-.grao:nth-child(4)  { left: 37%; width: 15px; height: 6px; --cor: var(--color-gold);   --tilt: -20deg; --drift: -18px; animation-duration: 24s; animation-delay: -12s; }
-.grao:nth-child(5)  { left: 50%; width: 12px; height: 5px; --cor: var(--color-basil);  --tilt: 10deg;  --drift: 28px;  animation-duration: 19s; animation-delay: -6s; }
-.grao:nth-child(6)  { left: 61%; width: 21px; height: 9px; --cor: var(--color-tomato); --tilt: -8deg;  --drift: -38px; animation-duration: 30s; animation-delay: -15s; }
-.grao:nth-child(7)  { left: 71%; width: 10px; height: 4px; --cor: var(--color-gold);   --tilt: 14deg;  --drift: 20px;  animation-duration: 16s; animation-delay: -3s; }
-.grao:nth-child(8)  { left: 81%; width: 16px; height: 7px; --cor: var(--color-basil);  --tilt: -16deg; --drift: -24px; animation-duration: 23s; animation-delay: -10s; }
-.grao:nth-child(9)  { left: 90%; width: 13px; height: 5px; --cor: var(--color-tomato); --tilt: 6deg;   --drift: 32px;  animation-duration: 20s; animation-delay: -7s; }
-.grao:nth-child(10) { left: 96%; width: 8px;  height: 4px; --cor: var(--color-gold);   --tilt: -10deg; --drift: -14px; animation-duration: 15s; animation-delay: -1s; }
-
-/* Sobre fundo escuro (hero e rodapé): nada de vermelho/amarelo, só um tom neutro de farinha */
-.pasta-bg--escuro .grao {
-  --cor: var(--color-wheat);
-}
-
-@media (max-width: 480px) {
-  .grao:nth-child(n + 7) {
-    display: none;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .pasta-bg {
-    display: none;
-  }
 }
 
 /* ---------- Reveal animation ---------- */
